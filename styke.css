@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
+
+:root{
+
+    --pale-purple: #e8d71ff;
+    
+
+}
+
+*{
+    font-family: "Gabarito" ,sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
