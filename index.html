@@ -18,7 +18,7 @@
 
         <div class="bill-amount">
             <label for="billAmount">Bill Amount</label>
-            <input type="number" id="billAmount" value="0" min="0" step="0.01"/>
+            <input type="number" id="billAmount" value="0" min="0" step="0.01" onfocus="this.select()"/>
         </div>
 
         <div class="service-tip">
@@ -28,12 +28,12 @@
             <div class="tips">
 
                 <div class="tip">
-                    <input type="radio" name="tip" id="tip5" value="5">
+                    <input type="radio" name="tip" id="tip5" value="5" checked />
                     <label for="tip5">5%</label>
                 </div>
 
                 <div class="tip">
-                    <input type="radio" name="tip" id="tip10" value="10">
+                    <input type="radio" name="tip" id="tip10" value="10" />
                     <label for="tip10">10%</label>
                 </div>
 
@@ -55,7 +55,7 @@
                 <span>No .of Guest</span>
                 <output id="count" for="guestCount">1</output>
             </label>
-            <input type="range" id="guestCount" value="1" min="1" max="20" />
+            <input type="range" id="guestCount" value="1" min="1" max="20" oninput="count.value = this.value" />
         </div>
 
 
