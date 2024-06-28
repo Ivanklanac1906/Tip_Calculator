@@ -8,7 +8,10 @@ const ui = {
 
 
 function initApp() {
+    
     ui.form.addEventListener('submit', onFormSubmit)
+    ui.form.addEventListener('reset', onFormReset);
+    document.addEventListener('DOMContentLoaded', onFormReset);
 }
 
 function onFormSubmit(e) {
@@ -33,6 +36,15 @@ function onFormSubmit(e) {
  const tipPerGuest = tipAmount / guestCount;
  const totalPerGuest = (billAmount + tipAmount) / guestCount;
 
+   displayResult(tipAmount, tipPerGuest, totalPerGuest)
+}
+
+function onFormReset(){
+    displayResult(0, 0, 0);
+}
+
+
+function displayResult(tipAmount, tipPerGuest, totalPerGuest){
     ui.tipAmount.textContent = formatNumber(tipAmount);
     ui.tipPerGuest.textContent = formatNumber(tipPerGuest);
     ui.totalPerGuest.textContent = formatNumber(totalPerGuest);
