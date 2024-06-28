@@ -15,6 +15,17 @@
 
 }
 
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
+    appearance: none;
+}
+
+
+::selection{
+    background: var(--pale-purple);
+    color: var(--tekhelet);
+}
+
 *{
     font-family: "Gabarito" ,sans-serif;
     padding: 0;
@@ -100,7 +111,112 @@ font-size: 1.25rem;
     transition: 0.2s;
 }
 
-.tips:has(input:checked) label {
+.tip:has(input:checked) label {
     background: var(--pomp-and-power);
     color: var(--light-color);
+}
+
+.tip input[type="radio"]{
+    appearance: none;
+}
+
+.guest-count label [for = "guestCount"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guest-count output{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.guest-count output::after{
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.25rem;
+    color: var(--pomp-and-power);
+    content: "\e7fd";
+}
+
+.guest-count input {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: var(--input-bg-color);
+    cursor: pointer; 
+    margin-block: 10px;
+}
+
+.guest-count input::-webkit-slider-thumb{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--pomp-and-power);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button{
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 5px;
+    background: var(--prussian-blue);
+    color: var(--light-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+
+
+.actions button:last-child {
+    background: var(--tekhelet);
+}
+
+
+.actions button:hover{
+    background: var(--pomp-and-power);
+}
+
+.result{
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+
+
+.result ul{
+
+    list-style-type: none;
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+}
+
+
+.result li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.result small {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted-color);
+}
+
+.result span {
+    font-size: 1.5rem;
+    color: var(--pomp-and-power);
 }
