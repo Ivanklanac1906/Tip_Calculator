@@ -120,6 +120,23 @@ font-size: 1.25rem;
     appearance: none;
 }
 
+.tip input[type="number"] {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    display: none;
+    background: var(--pomp-and-power);
+    color: var(--light-color);
+
+}
+
+.tip:has(input:checked) input[type = "number"]{
+    display: block;
+}
+
 .guest-count label [for = "guestCount"] {
     display: flex;
     align-items: center;
