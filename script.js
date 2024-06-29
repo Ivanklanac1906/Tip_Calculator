@@ -3,7 +3,7 @@ const ui = {
     tips: document.querySelector('.tips'),
     tipAmount: document.querySelector('.tip-amount'),
     tipPerGuest: document.querySelector('.tip-guest'),
-    totalPerGuest: document.querySelector('.total-guest')
+    totalPerGuest: document.querySelector('.total')
 };
 
 
